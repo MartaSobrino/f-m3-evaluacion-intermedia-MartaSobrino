@@ -80,7 +80,7 @@ class App extends React.Component {
       return (
         <div className="App">
         <div className="poke__title">
-          <img className="poke__logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon__logo" />
+          <img className="poke__logo" src="https://1000logos.net/wp-content/uploads/2017/05/Logo-Pokemon.jpg" alt="pokemon__logo" />
         </div>
           <PokeList 
             list={pokemon}          
