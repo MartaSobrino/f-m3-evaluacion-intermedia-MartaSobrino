@@ -83,6 +83,7 @@ class App extends React.Component {
           <img className="poke__logo" src="https://1000logos.net/wp-content/uploads/2017/05/Logo-Pokemon.jpg" alt="pokemon__logo" />
         </div>
           <PokeList 
+          //list es el nombre de mi prop que le voy a pasar a mi hijo Pokelist y pokemon es a lo que corresponde, en este caso, mi array
             list={pokemon}          
           />
         </div>

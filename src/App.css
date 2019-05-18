@@ -1,47 +1,5 @@
-.poke__container {
-  display: flex; 
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
-
 ul {
   list-style: none;
-}
-
-.poke__list {
-  width: 150px;
-  border: 3px solid black;
-  border-radius: 5%;
-  padding: 20px;
-  margin: 10px;
-  justify-content: center;
-  text-align: center;
-}
-
-.poke__types {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-}
-
-.poke__types > li{
-  background: lightblue;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid grey;
-  color: rgb(53, 53, 53);
-  font-variant: small-caps;
-}
-
-.poke__name {
-  text-transform: capitalize;
-  border-top: 3px solid rgb(53, 53, 53);
-  border-bottom: 3px solid rgb(53, 53, 53);
-}
-
-.poke__image {
-  height: 150px;
 }
 
 .poke__title {

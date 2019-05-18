@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './pokemon.css';
 
 class Pokemon extends React.Component{
     render(){
         const {name, url, types} = this.props.poke;
         return(
             <div className="card__container">
-                <img alt="poke__image" src={url}/>
+                <img alt={name} src={url}/>
                 <h2 className="poke__name">{name}</h2>
                 <ul className="poke__types">
                     {types.map((type,index2) => {
@@ -23,7 +24,7 @@ class Pokemon extends React.Component{
 Pokemon.propTypes = {
     url: PropTypes.string,
     name: PropTypes.string,
-    type: PropTypes.array
+    types: PropTypes.array
 }
 
 export default Pokemon;
