@@ -5,10 +5,10 @@ import './pokelist.css';
 
 class PokeList extends React.Component{
     render(){
-      const {favPoke}=this.props;
+      const {favPoke, list}=this.props;
         return(
             <ul className="poke__container">
-            {this.props.list.map((poke, index) => {
+            {list.map((poke, index) => {
               return(
                   <li className="poke__list" key={index}>
                    <Pokemon 
@@ -24,7 +24,8 @@ class PokeList extends React.Component{
 }
 
 Pokemon.propTypes = {
-  list: PropTypes.array
+  list: PropTypes.array,
+  favPoke: PropTypes.func
 }
 
 export default PokeList;

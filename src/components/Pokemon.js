@@ -7,7 +7,7 @@ class Pokemon extends React.Component{
         const {name, url, types} = this.props.poke;
         const {favPoke}=this.props;
         return(
-            <div className="card__container"  onClick={favPoke}>
+            <div className="card__container" onClick={favPoke}>
                 <img alt={name} src={url}/>
                 <h2 className="poke__name">{name}</h2>
                 <ul className="poke__types">
@@ -25,7 +25,8 @@ class Pokemon extends React.Component{
 Pokemon.propTypes = {
     url: PropTypes.string,
     name: PropTypes.string,
-    types: PropTypes.array
+    types: PropTypes.array,
+    favPoke: PropTypes.func
 }
 
 export default Pokemon;

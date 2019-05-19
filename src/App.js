@@ -15,12 +15,11 @@ class App extends React.Component {
 
   handleFav(event){
     const trigger = event.currentTarget;
-    // console.log(trigger);
     this.setState(prevState => ({
       isClicked: prevState.isClicked ? trigger.className = null : trigger.className = 'card__container fav'
     })); 
   }
-  
+
   render(){
       return (
         <div className="App">
