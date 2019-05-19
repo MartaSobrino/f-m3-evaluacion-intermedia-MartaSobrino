@@ -5,13 +5,15 @@ import './pokelist.css';
 
 class PokeList extends React.Component{
     render(){
+      const {favPoke}=this.props;
         return(
             <ul className="poke__container">
             {this.props.list.map((poke, index) => {
               return(
-                  <li className="poke__list" key={index} onClick={this.props.favPoke}>
+                  <li className="poke__list" key={index}>
                    <Pokemon 
                       poke={poke}
+                      favPoke={favPoke}
                    />
                   </li>
               );

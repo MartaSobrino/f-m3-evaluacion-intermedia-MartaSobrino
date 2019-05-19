@@ -8,7 +8,7 @@ class App extends React.Component {
     super(props)
     this.state ={
       pokemon: pokemon,
-      isClicked: false
+      isClicked: null
     }
     this.handleFav = this.handleFav.bind(this);
   }
@@ -17,10 +17,10 @@ class App extends React.Component {
     const trigger = event.currentTarget;
     // console.log(trigger);
     this.setState(prevState => ({
-      isClicked: prevState.isClicked ? trigger.className='poke__list' : trigger.className='poke__list fav'
+      isClicked: prevState.isClicked ? trigger.className = null : trigger.className = 'card__container fav'
     })); 
   }
-
+  
   render(){
       return (
         <div className="App">
