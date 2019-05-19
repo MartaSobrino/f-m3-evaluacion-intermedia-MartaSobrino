@@ -12,4 +12,10 @@
     margin: 10px;
     justify-content: center;
     text-align: center;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
 }  
+
+.poke__list:hover {
+    transform: scale(1.1); 
+}

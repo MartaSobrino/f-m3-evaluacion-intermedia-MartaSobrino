@@ -9,7 +9,7 @@ class PokeList extends React.Component{
             <ul className="poke__container">
             {this.props.list.map((poke, index) => {
               return(
-                  <li className="poke__list" key={index}>
+                  <li className="poke__list" key={index} onClick={this.props.favPoke}>
                    <Pokemon 
                       poke={poke}
                    />
