@@ -2,22 +2,30 @@ import React from 'react';
 import './App.css';
 import PokeList from './components/PokeList';
 import pokemon from './components/DataPokemon';
-
 class App extends React.Component {
   constructor(props){
     super(props)
     this.state ={
       pokemon: pokemon,
-      isClicked: null
+      favoritos: []
     }
+
     this.handleFav = this.handleFav.bind(this);
   }
 
   handleFav(event){
-    const trigger = event.currentTarget;
-    this.setState(prevState => ({
-      isClicked: prevState.isClicked ? trigger.className = null : trigger.className = 'card__container fav'
-    })); 
+    const id = parseInt(event.currentTarget.id);
+    const isFav = this.state.favoritos.includes(id);
+    if(isFav===true){
+      const newFav = [...this.state.favoritos];
+      let i = newFav.indexOf( id );
+      newFav.splice( i, 1 );
+      this.setState({favoritos: newFav})
+    } else {
+      const newFAv = [...this.state.favoritos];
+      newFAv.push(id);
+      this.setState({favoritos: newFAv})
+    }  
   }
 
   render(){
@@ -28,7 +36,8 @@ class App extends React.Component {
         </div>
           <PokeList 
             list={this.state.pokemon}
-            favPoke={this.handleFav}          
+            favPoke={this.handleFav}  
+            fav= {this.state.favoritos}        
           />
         </div>
       );

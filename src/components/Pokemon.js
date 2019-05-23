@@ -4,10 +4,10 @@ import './pokemon.css';
 
 class Pokemon extends React.Component{
     render(){
-        const {name, url, types} = this.props.poke;
-        const {favPoke}=this.props;
+        const {name, url, types, id} = this.props.poke;
+        const {favPoke, fav}=this.props;
         return(
-            <div className="card__container" onClick={favPoke}>
+            <div id={id} className={`card__container ${fav.includes(id) ? 'fav': ''} `} onClick={favPoke}>
                 <img alt={name} src={url}/>
                 <h2 className="poke__name">{name}</h2>
                 <ul className="poke__types">
